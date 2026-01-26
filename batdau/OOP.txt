@@ -1,0 +1,14 @@
+OOP:
+vd: có class Con_cho{}
+	+, tên, màu lông, tuổi là biến(thuộc tính)
+	+, hành động sủa, ăn cơm là phương thức
+- và từ lớp con_cho này ta tạo thêm nhiều đối tượng khác như object cho_shiba, object cho_pug
+hệ thông oop là một tập các đối tượng như vậy
+- hàm khởi tạo: khi dùng lệnh new sẽ tạo một vùng nhớ trắng tinh, nếu ko có hàm khởi tạo các thông tin sẽ là null hoặc = 0
+vì vậy cần hàm khởi tạo để ép buộc đối tượng đó phải có ngay dữ liệu (ví dụ: sinh ra là phải có tên ngay) để tránh lỗi logic sau này.
+
+- ta thường đặt tên tham số trùng với thuộc tính vì (vd: truyền tham số ten vào thuộc tính ten) 
+Lúc này máy tính bị loạn, không biết cái nào là biến local, cái nào là biến của class.
+	+ lúc này this ra đời,
+		- this.ten: biến ten của đối tượng này(thuộc tính)
+		- ten: là tham số truyền vào
