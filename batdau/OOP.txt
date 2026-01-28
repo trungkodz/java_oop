@@ -1,14 +1,61 @@
 OOP:
 vd: có class Con_cho{}
-	+, tên, màu lông, tuổi là biến(thuộc tính)
-	+, hành động sủa, ăn cơm là phương thức
+ 	+, tên, màu lông, tuổi là biến(thuộc tính)
+ 	+, hành động sủa, ăn cơm là phương thức
 - và từ lớp con_cho này ta tạo thêm nhiều đối tượng khác như object cho_shiba, object cho_pug
 hệ thông oop là một tập các đối tượng như vậy
 - hàm khởi tạo: khi dùng lệnh new sẽ tạo một vùng nhớ trắng tinh, nếu ko có hàm khởi tạo các thông tin sẽ là null hoặc = 0
 vì vậy cần hàm khởi tạo để ép buộc đối tượng đó phải có ngay dữ liệu (ví dụ: sinh ra là phải có tên ngay) để tránh lỗi logic sau này.
 
-- ta thường đặt tên tham số trùng với thuộc tính vì (vd: truyền tham số ten vào thuộc tính ten) 
+
+
+- ta thường đặt tên tham số trùng với thuộc tính vì (vd: truyền tham số ten vào thuộc tính ten)
 Lúc này máy tính bị loạn, không biết cái nào là biến local, cái nào là biến của class.
-	+ lúc này this ra đời,
-		- this.ten: biến ten của đối tượng này(thuộc tính)
-		- ten: là tham số truyền vào
+ 	+ lúc này this ra đời,
+ 		- this.ten: biến ten của đối tượng này(thuộc tính)
+ 		- ten: là tham số truyền vào
+
+
+
+- các phương thức:
+	+ khởi tạo: chạy ngay lập tức khi tạo đối tượng mới<new>
+		* đặc điểm: cùng tên với class, không có kiểu trả về
+		* mục đích: tạo giá trị ban đầu cho đối tượng
+	+ Phương thức Instance (Phương thức thông thường): hàm gắn liền với một đối tượng cụ thể khi dùng nó phải tạo đối tượng [new] trước
+		* đặc điểm: không có static
+		* mục đích: sử lý dữ liệu riêng của từng đối tượng
+	+ Phương thức Tĩnh (Static Method): đây là phương thức của tập thể [class], không thuộc về riêng đối tượng nào
+		* đặc điểm: có từ khóa [static]
+		* mục đích: dùng cho các hàm tiện ích chung không cần dữ liệu riêng
+	+ Phương thức Trừu tượng (Abstract Method): chỉ khai báo tên hàm còn nội dung bên trong thì rỗng
+		* đặc điểm: có từ khóa abstract, không có {} mà kết thúc bằng ;
+		* mục đích: ép buộc các class con phải viết lại nội dung cho hàm này( dùng trong tính đa hình)
+
+- 4 nguyên lí cơ bản của lập trình oop:
+ 	1. tính đa hình
+ 	2. tính kế thừa
+ 	3. tính đóng gói
+ 	4. tính trừu tượng
+
+1. tính kế thừa: public class banphim extends sinhvien
+ 	- class banphim sẽ kế thừa các thuộc tính , phương thức của lớp sinhvien
+ 	** 4 quy tắc cần biết:
+ 		1.khi tạo một lớp con mà không viết một hàm khởi tạo nào, java sẽ tự động tạo một cái
+ 			public <lopcon>(){
+ 				super(); // gọi hàm khởi tạo không tham số của cha
+ 			}
+
+ 		2.nếu lớp cha ko có hàm khởi tạo, java sẽ tự động tạo một hàm khởi tạo rỗng
+ 			public <lopcha>(){} //rỗng
+
+ 		3.ngay khi bạn viết một hàm khởi tạo vào <lopcha> java sẽ thu hồi hàm rỗng
+ 
+ 		-lớp con sẽ truy câp vào hàm khởi tạo của lớp cha vậy nên ta cần tạo cho lớp con một hàm để truy cập vào được để ko bị lỗi
+2. tính đóng gói: là kiểu biến truy cập 
+
+	- là kỹ thuật gộp chung dữ liệu (thuộc tính/biến) và hành vi (phương thức/hàm) liên quan đến dữ liệu đó vào một đơn vị duy nhất (gọi là Class). Đồng thời, nó che giấu việc triển khai chi tiết bên trong và chỉ cung cấp một số cổng giao tiếp an toàn ra bên ngoài.
+
+	+public: cho phép truy cập từ bất kì đâu
+	+private: chỉ cho phép truy cập trong cùng một class
+	+protected: chỉ cho truy cập cùng lớp, lớp con, lớp cùng 1 package, class con khác package
+ 

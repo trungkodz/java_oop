@@ -23,5 +23,8 @@ public class start {
         System.out.println("thong tin sv: ");
         sv1.thongtinsinhvien();
         sv1.tinhdiemtbmsv(9.5, 8.0, 9.75);
+        sinhviennamnhat sv2 = new sinhviennamnhat("Huy", "28aa4042299", 0);
+        sv2.thongtinsinhvien();
+
     }
 }
