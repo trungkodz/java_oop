@@ -19,12 +19,13 @@ import java.lang.reflect.Array;
 public class start {
     public static void main(String[] args) {
         sinhvien sv1 = new sinhvien("trung", "28a4402270", 86);
-
+        svCNTTA sv3 = new svCNTTA(9.5, 10, 8);
         System.out.println("thong tin sv: ");
         sv1.thongtinsinhvien();
         sv1.tinhdiemtbmsv(9.5, 8.0, 9.75);
-        sinhviennamnhat sv2 = new sinhviennamnhat("Huy", "28aa4042299", 0);
+        sinhviennamnhat sv2 = new sinhviennamnhat("Huy", "28aa4042299", 0, 28);
         sv2.thongtinsinhvien();
+        System.out.println(sv3.dtbk1());
 
     }
 }

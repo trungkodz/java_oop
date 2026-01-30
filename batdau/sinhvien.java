@@ -1,7 +1,7 @@
 public class sinhvien {
     // thuộc tính (Attributes/Fields) :dữ liệu của đối tượng
     public String ten;
-    private String Msv;
+    public String Msv;
     private long drl;
     private double m1, m2, m3;
 

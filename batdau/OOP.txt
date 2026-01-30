@@ -1,13 +1,16 @@
 OOP:
 vd: có class Con_cho{}
- 	+, tên, màu lông, tuổi là biến(thuộc tính)
- 	+, hành động sủa, ăn cơm là phương thức
+ 	+, tên, màu lông, tuổi là biến(thuộc tính) Attribute/Property
+ 	+, hành động sủa, ăn cơm là (phương thức) Method 
 - và từ lớp con_cho này ta tạo thêm nhiều đối tượng khác như object cho_shiba, object cho_pug
 hệ thông oop là một tập các đối tượng như vậy
 - hàm khởi tạo: khi dùng lệnh new sẽ tạo một vùng nhớ trắng tinh, nếu ko có hàm khởi tạo các thông tin sẽ là null hoặc = 0
 vì vậy cần hàm khởi tạo để ép buộc đối tượng đó phải có ngay dữ liệu (ví dụ: sinh ra là phải có tên ngay) để tránh lỗi logic sau này.
 
+- lỗi hay gặp ở phần Scanner: sau khi nhập số phím enter vẫn còn nằm trong bộ nhớ đệm, vậy nên nếu sau số là string thì nó sẽ nhận enter là string và ko cho nhập tiếp.
+khắc phục: thêm 1 dòng sc.nextline() ngay sau.
 
+- có thể so sánh đối tượng trong hàm: vd bài tập 04 của thầy
 
 - ta thường đặt tên tham số trùng với thuộc tính vì (vd: truyền tham số ten vào thuộc tính ten)
 Lúc này máy tính bị loạn, không biết cái nào là biến local, cái nào là biến của class.
@@ -15,7 +18,9 @@ Lúc này máy tính bị loạn, không biết cái nào là biến local, cái
  		- this.ten: biến ten của đối tượng này(thuộc tính)
  		- ten: là tham số truyền vào
 
+- package: nếu file code ở file gốc thì ko cần khai báo, nhưng nếu tạo thư mục mới trong thư mục gốc ta khai báo package <thư mục con>
 
+** trong vs code nếu khai báo package thì dùng run java ở góc trên bên phải
 
 - các phương thức:
 	+ khởi tạo: chạy ngay lập tức khi tạo đối tượng mới<new>
